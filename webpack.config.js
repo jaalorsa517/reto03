@@ -6,10 +6,11 @@ module.exports = {
     entry: path.resolve(__dirname, 'scripts', 'main.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: '/images/'
     },
     devServer: {
-        open: false,
+        open: true,
         contentBase: path.join(__dirname, 'dist')
     },
     mode: 'development',
@@ -22,6 +23,17 @@ module.exports = {
                     'css-loader'
                 ]
             },
+            {
+                test: /\.jpg|png|svg|mp4|webm|gif|woff|eot|ttf$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 32000,
+                        }
+                    },
+                ]
+            }
         ]
     },
     plugins: [

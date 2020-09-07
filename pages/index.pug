@@ -1,22 +1,38 @@
+mixin card(title, parraf)
+  section.card-container(class=attributes.class)
+    h2.card-title(class=attributes.class)= title
+    p.card-parraf(class=attributes.class)= parraf
+    .card-icon(class=attributes.class)
+      img/
+
 doctype html
 html(lang = "es")
   head
     meta(charset="UTF-8")/
     meta(name="viewport" content="width=device-width, initial-scale=1.0")/
     title Frontend Mentor | Four card feature section
-    style.
-      .attribution{
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
   body 
-    |Reliable, efficient delivery Powered by Technology Our Artificial
-    |Intelligence powered tools use millions of project data points to ensure
-    |that your project is successful Supervisor Monitors activity to identify
-    |project roadblocks Team Builder Scans our talent network to create the
-    |optimal team for your project Karma Regularly evaluates our talent to ensure
-    |quality Calculator Uses data from past projects to provide better delivery
-    |estimates
+    main.main-container
+      section.title-container
+        h1.title.title-single Reliable, efficient delivery 
+        h1.title Powered by Technology
+        p Our Artificial Intelligence powered tools use millions of project data points to ensure
+          |that your project is successful 
+      +card('Supervisor',
+        'Monitors activity to identify project roadblocks'
+        )(class='supervisor')
+      +card(
+        'Team Builder ',
+        'Scans our talent network to create the optimal team for your project '
+      )(class='team-builder')
+      +card(
+        'Karma',
+        'Regularly evaluates our talent to ensure quality '
+      )(class='karma')
+      +card(
+        'Calculator',
+        'Uses data from past projects to provide better delivery estimates'
+      )(class='calculator')
+    .attribution Challenge by 
+      |#[a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor] 
+      |Coded by #[a(href="#") Jaime Ortiz].
