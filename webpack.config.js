@@ -8,14 +8,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        publicPath: '/images/'
+        publicPath: ''
     },
     devServer: {
         hot: true,
         open: true,
         contentBase: path.join(__dirname, 'dist')
     },
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [
             {
