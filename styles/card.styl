@@ -1,0 +1,54 @@
+pos-icon-bottom = 10px
+pos-icon-rigth = 10px
+
+card-style(color)
+    border-top: 5px solid color
+    box-shadow: 5px 5px 10px color_neutral_second
+pos-icon(right, bottom)
+    position: absolute
+    right: right
+    bottom: bottom
+
+    
+.card-container
+    display:flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 30px
+    width: 300px
+    height: 250px
+    border-radius: 5px
+    position: relative
+    background-color: color_neutral_third
+    & .card-title
+        font-weight: 600
+        margin: 20px 0px 5px 20px
+    & .card-parraf
+        margin: 5px 25px 5px 20px
+        font-size: 0.8rem
+    & .card-icon
+        width:  64px
+        height: 64px
+        background-repeat: no-repeat
+        background-size: 100% 100%
+        margin: 5px 20px 10px 0px 
+.card-container.supervisor
+    card-style(color_second)
+    & .card-icon
+        pos-icon(pos-icon-rigth, pos-icon-bottom)
+        background-image: url('../images/icon-supervisor.svg')
+.card-container.team-builder
+    card-style(color_first)
+    & .card-icon
+        pos-icon(pos-icon-rigth, pos-icon-bottom)
+        background-image: url('../images/icon-team-builder.svg')
+.card-container.karma
+    card-style(color_third)
+    & .card-icon
+        pos-icon(pos-icon-rigth, pos-icon-bottom)
+        background-image: url('../images/icon-karma.svg')
+.card-container.calculator
+    card-style(color_fourth)
+    & .card-icon
+        pos-icon(pos-icon-rigth, pos-icon-bottom)
+        background-image: url('../images/icon-calculator.svg')

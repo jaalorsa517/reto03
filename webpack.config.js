@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
 // const stylus = require('stylus-loader');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
         publicPath: '/images/'
     },
     devServer: {
+        hot: true,
         open: true,
         contentBase: path.join(__dirname, 'dist')
     },
@@ -37,6 +39,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'pages', 'index.html'),
             filename: 'index.html'
