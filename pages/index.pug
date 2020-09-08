@@ -17,21 +17,22 @@ html(lang = "es")
         h1.title Powered by Technology
         p Our Artificial Intelligence powered tools use millions of project data points to ensure
           |that your project is successful 
-      +card('Supervisor',
-        'Monitors activity to identify project roadblocks'
-        )(class='supervisor')
-      +card(
-        'Team Builder ',
-        'Scans our talent network to create the optimal team for your project '
-      )(class='team-builder')
-      +card(
-        'Karma',
-        'Regularly evaluates our talent to ensure quality '
-      )(class='karma')
-      +card(
-        'Calculator',
-        'Uses data from past projects to provide better delivery estimates'
-      )(class='calculator')
+      section.cards-container
+        +card('Supervisor',
+          'Monitors activity to identify project roadblocks'
+          )(class='supervisor')
+        +card(
+          'Team Builder ',
+          'Scans our talent network to create the optimal team for your project '
+        )(class='team-builder')
+        +card(
+          'Karma',
+          'Regularly evaluates our talent to ensure quality '
+        )(class='karma')
+        +card(
+          'Calculator',
+          'Uses data from past projects to provide better delivery estimates'
+        )(class='calculator')
     .attribution Challenge by 
       |#[a(href="https://www.frontendmentor.io?ref=challenge" target="_blank") Frontend Mentor] 
       |Coded by #[a(href="#") Jaime Ortiz].
